@@ -21,28 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.pem.CodeLab"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "fonts": [
-      {
-        "family": "Lato",
-        "asset": "./assets/fonts/Lato/Lato-Regular.ttf"
-      },
-      {
-        "family": "Lato-Bold",
-        "asset": "./assets/fonts/Lato/Lato-Bold.ttf"
-      },
-      {
-        "family": "Lato-BoldItalic",
-        "asset": "./assets/fonts/Lato/Lato-BoldItalic.ttf"
-      },
-      {
-        "family": "Chonburi",
-        "asset": "./assets/fonts/Chonburi/Chonburi-Regular.ttf"
+    "extra": {
+      "eas": {
+        "projectId": "750aa952-89f3-432c-a9ca-bb54e37db410"
       }
-    ]
+    }
   }
 }
