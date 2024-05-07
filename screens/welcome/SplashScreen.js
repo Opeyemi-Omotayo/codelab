@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import { View, StyleSheet, Dimensions, Animated } from "react-native";
+import { View, StyleSheet, Dimensions, Animated, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { AntDesign } from "@expo/vector-icons";
+import { GlobalColours } from "../../utils/Colors";
 
 const SplashScreen = () => {
   const navigation = useNavigation();
@@ -25,7 +26,9 @@ const SplashScreen = () => {
     pulse();
 
    
-
+    const timer = setTimeout(() => {
+        navigation.navigate("Onboarding");
+      }, 3000);
     return () => clearTimeout(timer);
   }, [navigation, pulseAnimation]);
 
@@ -37,15 +40,11 @@ const SplashScreen = () => {
           { transform: [{ scale: pulseAnimation }] },
         ]}
       >
-        <AntDesign name="shoppingcart" size={24} color="white" />
-        <Text>basket</Text>
+        <AntDesign name="shoppingcart" size={36} color="white" />
       </Animated.View>
     </View>
   );
 };
-
-const windowWidth = Dimensions.get("window").width;
-const windowHeight = Dimensions.get("window").height;
 
 const styles = StyleSheet.create({
   container: {
@@ -55,10 +54,13 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
  logoContainer: {
-    backgroundColor: "#FF7518",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: GlobalColours.primary ,
     borderRadius: 75,
-    padding: 20
- }
+    paddingVertical: 30,
+    paddingHorizontal: 30,
+ },
  
 });
 
